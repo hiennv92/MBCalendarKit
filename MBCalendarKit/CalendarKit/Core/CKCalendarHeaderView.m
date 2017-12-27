@@ -61,7 +61,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+
         _headerMonthTextFont = [UIFont boldSystemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline
                                                              ].pointSize];
         _headerMonthTextColor = kCalendarColorHeaderMonth;

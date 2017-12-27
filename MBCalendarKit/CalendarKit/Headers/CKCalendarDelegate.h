@@ -17,6 +17,9 @@ NS_SWIFT_NAME(CalendarViewDelegate)
 
 @optional
 
+
+- (BOOL)calendarView:(nonnull CKCalendarView *)calendarView shouldSelectDate:(nonnull NSDate *)date;
+
 // MARK: - Handling Date Selection
 
 /**

@@ -314,7 +314,7 @@
 - (void)highlightCellBeneathTouches:(NSSet <UITouch *> *)touches
 {
     UICollectionViewCell *cellFromTouch = [self cellFromTouches:touches];
-    
+
     if(cellFromTouch)
     {
         self.mostRecentlyHighlightedCell.highlighted = NO;
