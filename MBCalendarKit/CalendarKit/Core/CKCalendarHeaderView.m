@@ -62,11 +62,11 @@
     self = [super initWithFrame:frame];
     if (self) {
 
-        _headerMonthTextFont = [UIFont boldSystemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline
+        _headerMonthTextFont = [UIFont systemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline
                                                              ].pointSize];
         _headerMonthTextColor = [UIColor whiteColor];
         _headerMonthTextShadow = kCalendarColorHeaderMonthShadow;
-        _headerWeekdayTitleFont = [UIFont boldSystemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1].pointSize];
+        _headerWeekdayTitleFont = [UIFont systemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1].pointSize];
         _headerWeekdayTitleColor = [UIColor whiteColor];
         _headerWeekdayShadowColor = kCalendarColorHeaderWeekdayShadow;
         _headerGradient = [UIColor colorWithRed:67/255. green:118/255. blue:199/255. alpha:1.0];
@@ -400,6 +400,7 @@
 - (void)_updateTitleLabelText
 {
     NSString *title = [self.dataSource titleForHeader:self];
+    title = [NSString stringWithFormat:@"%@%@", [title substringToIndex:1].uppercaseString, [title substringFromIndex:1]];
     self.titleLabel.text = title;
 }
 
@@ -483,7 +484,7 @@
     CGFloat rotation = isLeading ? 30.0 : 90.0;
     
     MBPolygonView *polygonView = [[MBPolygonView alloc] initWithFrame:CGRectZero numberOfSides:3 andRotation:rotation andScale:10.0];
-    
+    polygonView.fillColor = [UIColor whiteColor];
     polygonView.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:polygonView
