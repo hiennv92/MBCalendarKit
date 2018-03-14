@@ -409,7 +409,7 @@
 {
     self.gridView.gridDataSource = self.calendarModel;
     self.gridView.gridAppearanceDelegate = self;
-    self.gridView.backgroundColor = kCalendarColorLightGray;
+    self.gridView.backgroundColor = [UIColor whiteColor];
     
     if(![self.subviews containsObject:self.gridView])
     {
