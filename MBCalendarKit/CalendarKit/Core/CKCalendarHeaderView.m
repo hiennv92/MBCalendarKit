@@ -64,12 +64,12 @@
 
         _headerMonthTextFont = [UIFont boldSystemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline
                                                              ].pointSize];
-        _headerMonthTextColor = kCalendarColorHeaderMonth;
+        _headerMonthTextColor = [UIColor whiteColor];
         _headerMonthTextShadow = kCalendarColorHeaderMonthShadow;
         _headerWeekdayTitleFont = [UIFont boldSystemFontOfSize:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1].pointSize];
-        _headerWeekdayTitleColor = kCalendarColorHeaderWeekdayTitle;
+        _headerWeekdayTitleColor = [UIColor whiteColor];
         _headerWeekdayShadowColor = kCalendarColorHeaderWeekdayShadow;
-        _headerGradient = kCalendarColorHeaderGradientDark;
+        _headerGradient = [UIColor colorWithRed:67/255. green:118/255. blue:199/255. alpha:1.0];
         _headerTitleHighlightedTextColor = kCalendarColorHeaderTitleHighlightedBlue;
         
         _titleLabel = [[UILabel alloc] init];
